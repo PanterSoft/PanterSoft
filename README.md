@@ -53,12 +53,12 @@
 <br>
 
 <p align = "center">
-  <img  src = "https://github-readme-stats.vercel.app/api?username=PanterSoft&show_icons=true&theme=radical&line_height=27">
-  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=PanterSoft&hide=html,css,java,shaderlab,kotlin,hlsl&theme=radical">
+  <img  src = "https://github-readme-stats.vercel.app/api?username=PanterSoft&show_icons=true&theme=chartreuse-dark&line_height=27">
+  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=PanterSoft&hide=&theme=chartreuse-dark">
 </p>
 
 <p align = "center">
- <img  src="https://github-readme-streak-stats.herokuapp.com/?user=PanterSoft&show_icons=true&locale=en&layout=compact&theme=radical&line_height=0" />
+ <img  src="https://github-readme-streak-stats.herokuapp.com/?user=PanterSoft&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark&line_height=0" />
 </p>
 
 <hr>
