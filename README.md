@@ -15,7 +15,7 @@
   - I love to explore new technologies and leverage them to solve real-life problems ✨.
 </p>
 <p align="center">
-  - In addition to my studies, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
+  - In addition to my aspired Bachelor Degree, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
 </p>-->
 
 <h2 align="center"> Technology Stack </h2>
