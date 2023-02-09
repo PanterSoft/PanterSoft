@@ -9,7 +9,7 @@
   I'm a 2rd year student pursuing a Bachelor Degree in Applied Computer Science 🎓 at HTWG Konstanz 🏛. I'm a passionate learner who's always willing to learn and work across technologies and domains 💡. I love to explore new technologies and leverage them to solve real-life problems ✨. In addition to my studies, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
 </p>   -->
 
-<h2 align="center"> Technology Stack <img src="https://github.com/PanterSoft/PanterSoft/blob/main/images/laptop.gif" width="50"></h2>
+<h2 align="center"> Technology Stack </h2>
 
 <p align="center">
 <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a>
@@ -27,7 +27,7 @@
 <a href="https://www.scala-lang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg" alt="scala" width="40" height="40"/> </a>
 </p>
 
-<h2 align="center"> Get in touch with me <img src="https://media0.giphy.com/media/jqNPzdTTxQfOgOqpO4/source.gif" width="20"></h2>
+<h2 align="center"> Get in touch with me </h2>
 
 <p align="center">
   <a href="mailto: mattesnico@gmail.com">
@@ -38,14 +38,12 @@
 </p>
 
 
-<h2 align="center"> My Contribution Graph <img src="https://media.giphy.com/media/xUA7aZeLE2e0P7Znz2/giphy.gif" width="20">
-</h2>
+<h2 align="center"> My Contribution Graph </h2>
 <p align="center">
-  <img src="https://github.com/PanterSoft/PanterSoft/raw/output/github-contribution-grid-snake.svg" alt="snake"></center>
+  <img src="https://github.com/PanterSoft/PanterSoft/raw/output/github-contribution-grid-snake.svg" alt="snake">
 </p>
 
-<h2 align="center"> My Github Stats <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="20">
-</h2>
+<h2 align="center"> My Github Stats </h2>
 
 <br>
 
