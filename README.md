@@ -4,14 +4,6 @@
 </p align="center">
 <img src="https://github.com/PanterSoft/PanterSoft/blob/main/images/banner_name.png" />
 
-<p align="center">
-
- <img src="https://badges.pufler.dev/visits/PanterSoft/PanterSoft"/>
- <!-- <img src="https://badges.pufler.dev/years/PanterSoft"/> -->
- <img src="https://badges.pufler.dev/repos/PanterSoft"/>
- <img src="https://badges.pufler.dev/commits/monthly/PanterSoft" />
-
-</p>
 
 <!-- <p align="center">
   I'm a 2rd year student pursuing a Bachelor Degree in Applied Computer Science 🎓 at HTWG Konstanz 🏛. I'm a passionate learner who's always willing to learn and work across technologies and domains 💡. I love to explore new technologies and leverage them to solve real-life problems ✨. In addition to my studies, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
@@ -40,10 +32,10 @@
 <p align="center">
 <!-- <img src="https://img.shields.io/badge/-ritik-purple?style=flat-square&logo=instagram&logoColor=white&link=https://www.instagram.com/nicodimarco2015/"/> -->
 <a href="mailto: mattesnico@gmail.com">
- <img src="https://img.shields.io/badge/-ritikpr307-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mattesnico@gmail.com"/>
+ <img src="https://img.shields.io/badge/-PanterSoft-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mattesnico@gmail.com"/>
 </a>
-<a href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
- <img src="https://img.shields.io/badge/-ritikrawal-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mattes-nico-807b9a251/"/>
+<a href="https://www.linkedin.com/in/mattes-nico-807b9a251/">
+ <img src="https://img.shields.io/badge/-PanterSoft-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mattes-nico-807b9a251/"/>
 </p>
 
 
