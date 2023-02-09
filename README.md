@@ -37,7 +37,6 @@
   <img src="https://img.shields.io/badge/-PanterSoft-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mattes-nico-807b9a251/"/>
 </p>
 
-
 <h2 align="center"> My Contribution Graph </h2>
 <p align="center">
   <picture>
@@ -45,25 +44,18 @@
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/PanterSoft/PanterSoft/raw/output/github-snake.svg">
   <img alt="github-snake" src="github-snake.svg">
   </picture>
-
-  <img src="https://github.com/PanterSoft/PanterSoft/raw/output/github-contribution-grid-snake.svg" alt="snake">
 </p>
 
 <h2 align="center"> My Github Stats </h2>
-
 <br>
-
 <p align = "center">
   <img  src = "https://github-readme-stats.vercel.app/api?username=PanterSoft&show_icons=true&theme=chartreuse-dark&line_height=27">
 </p>
-
 <p align = "center">
   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=PanterSoft&hide=&theme=chartreuse-dark">
 </p>
-
 <p align = "center">
  <img  src="https://github-readme-streak-stats.herokuapp.com/?user=PanterSoft&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark&line_height=0" />
 </p>
-
 <hr>
 <p align="center"> If you like it, fork 🍴 and star ⭐ </p>
