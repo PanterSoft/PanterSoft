@@ -6,7 +6,16 @@
 
 
 <p align="center">
-  I'm a 2rd year student pursuing a Bachelor Degree in Applied Computer Science 🎓 at HTWG Konstanz 🏛. I'm a passionate learner who's always willing to learn and work across technologies and domains 💡. I love to explore new technologies and leverage them to solve real-life problems ✨. In addition to my studies, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
+  - I'm a 2rd year student pursuing a Bachelor Degree in Applied Computer Science 🎓 at HTWG Konstanz 🏛.
+</p>
+<p align="center">
+  - I'm a passionate learner who's always willing to learn and work across technologies and domains 💡.
+</p>
+<p align="center">
+  - I love to explore new technologies and leverage them to solve real-life problems ✨.
+</p>
+<p align="center">
+  - In addition to my studies, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
 </p>
 
 <h2 align="center"> Technology Stack </h2>
