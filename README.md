@@ -42,7 +42,7 @@
   <a href="mailto: mattesnico@gmail.com">
     <img src="https://img.shields.io/badge/-PanterSoft-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mattesnico@gmail.com"/>
   </a>
-  <a href="https://www.linkedin.com/in/mattes-nico-807b9a251/">
+  <a href="https://www.linkedin.com/in/mattes-nico/">
   <img src="https://img.shields.io/badge/-PanterSoft-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mattes-nico-807b9a251/"/>
 </p>
 
