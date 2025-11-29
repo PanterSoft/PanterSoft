@@ -4,16 +4,6 @@
 
 ![PanterSoft Banner](https://raw.githubusercontent.com/PanterSoft/PanterSoft/main/images/PanterSoft_Banner.png)
 
-**Developer & Creator | Robotics & Autonomous Driving Specialist**
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-PanterSoft-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://PanterSoft.github.io/portfolio/)
-[![Email](https://img.shields.io/badge/Email-mattesnico@gmail.com-00D9FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mattesnico@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nico%20Mattes-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mattes-nico/)
-
-</div>
-
----
-
 ## 👋 About Me
 
 I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Computer Science** 🎓 at **HTWG Konstanz** 🏛.
@@ -81,10 +71,9 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 
 <div align="center">
 
+[![Contact Form](https://img.shields.io/badge/Contact%20Form-Send%20Message-00D9FF?style=for-the-badge&logo=mail&logoColor=white)](https://PanterSoft.github.io/portfolio/#contact)
 [![Email](https://img.shields.io/badge/Email-mattesnico@gmail.com-00D9FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mattesnico@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nico%20Mattes-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mattes-nico/)
-[![GitHub](https://img.shields.io/badge/GitHub-PanterSoft-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PanterSoft)
-
 </div>
 
 ---
