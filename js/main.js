@@ -151,64 +151,77 @@ if (contactForm) {
     });
 }
 
-// Particles.js Configuration
+// Particles.js Configuration - PanterSoft Cyberpunk Circuit Design
 if (typeof particlesJS !== 'undefined') {
     particlesJS('particles', {
         particles: {
             number: {
-                value: 80,
+                value: 120,
                 density: {
                     enable: true,
                     value_area: 800
                 }
             },
             color: {
-                value: '#c70039'
+                value: ['#00E5FF', '#39FF14', '#BC13FE'], // PanterSoft Neon Colors
+                animation: {
+                    enable: true,
+                    speed: 10,
+                    sync: false
+                }
             },
             shape: {
-                type: 'circle',
+                type: ['circle', 'triangle'], // Mix of shapes for circuit-like appearance
                 stroke: {
                     width: 0,
                     color: '#000000'
+                },
+                polygon: {
+                    nb_sides: 5
                 }
             },
             opacity: {
-                value: 0.5,
-                random: false,
+                value: 0.6,
+                random: true,
                 anim: {
-                    enable: false,
+                    enable: true,
                     speed: 1,
-                    opacity_min: 0.1,
+                    opacity_min: 0.2,
                     sync: false
                 }
             },
             size: {
-                value: 3,
+                value: 2.5,
                 random: true,
                 anim: {
-                    enable: false,
-                    speed: 40,
-                    size_min: 0.1,
+                    enable: true,
+                    speed: 2,
+                    size_min: 1,
                     sync: false
                 }
             },
             line_linked: {
                 enable: true,
-                distance: 150,
-                color: '#c70039',
-                opacity: 0.4,
-                width: 1
+                distance: 120,
+                color: '#00E5FF', // Neon Cyan connections
+                opacity: 0.3,
+                width: 1,
+                shadow: {
+                    enable: true,
+                    blur: 5,
+                    color: '#00E5FF'
+                }
             },
             move: {
                 enable: true,
-                speed: 2,
+                speed: 1.5,
                 direction: 'none',
-                random: false,
+                random: true,
                 straight: false,
                 out_mode: 'out',
                 bounce: false,
                 attract: {
-                    enable: false,
+                    enable: true,
                     rotateX: 600,
                     rotateY: 1200
                 }
@@ -219,7 +232,7 @@ if (typeof particlesJS !== 'undefined') {
             events: {
                 onhover: {
                     enable: true,
-                    mode: 'repulse'
+                    mode: 'grab' // Creates circuit-like connections on hover
                 },
                 onclick: {
                     enable: true,
@@ -229,24 +242,26 @@ if (typeof particlesJS !== 'undefined') {
             },
             modes: {
                 grab: {
-                    distance: 400,
+                    distance: 200,
                     line_linked: {
-                        opacity: 1
+                        opacity: 0.8,
+                        color: '#39FF14' // Neon Green on interaction
                     }
                 },
                 bubble: {
-                    distance: 400,
-                    size: 40,
+                    distance: 300,
+                    size: 8,
                     duration: 2,
-                    opacity: 8,
-                    speed: 3
+                    opacity: 0.8,
+                    speed: 3,
+                    color: '#BC13FE' // Neon Purple bubbles
                 },
                 repulse: {
-                    distance: 200,
+                    distance: 150,
                     duration: 0.4
                 },
                 push: {
-                    particles_nb: 4
+                    particles_nb: 3
                 },
                 remove: {
                     particles_nb: 2
