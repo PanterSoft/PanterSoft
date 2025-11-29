@@ -3,6 +3,9 @@ name: Deploy Website with EmailJS Config
 on:
   push:
     branches: [ Site ]
+  pull_request:
+    types: [closed]
+    branches: [ Site ]
   workflow_dispatch:
 
 jobs:
@@ -10,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # Only deploy if PR is merged (not closed without merging)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
 
     steps:
     - name: Checkout repository
@@ -76,7 +81,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
-        publish_branch: Site
+        publish_branch: gh-pages
         keep_files: false
         exclude_assets: ''
         force_orphan: true
