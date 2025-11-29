@@ -1,72 +1,100 @@
-<!--  https://PanterSoft.github.io/portfolio/  -->
-<p align="center">
+<div align="center">
 
-</p align="center">
-  <img src="https://github.com/PanterSoft/PanterSoft/blob/main/images/banner_name.png" />
+# PanterSoft
 
+![PanterSoft Banner](https://raw.githubusercontent.com/PanterSoft/PanterSoft/main/images/PanterSoft_Banner.png)
 
-<!--<p align="center">
-  - I'm a 2rd year student pursuing a Bachelor Degree in Applied Computer Science 🎓 at HTWG Konstanz 🏛.
-</p>
-<p align="center">
-  - I'm a passionate learner who's always willing to learn and work across technologies and domains 💡.
-</p>
-<p align="center">
-  - I love to explore new technologies and leverage them to solve real-life problems ✨.
-</p>
-<p align="center">
-  - In addition to my aspired Bachelor Degree, i am involved in the Formula student team "Bodensee Racing Team" 🏎 where i work in the autonomous driving department.
-</p>-->
+**Developer & Creator | Robotics & Autonomous Driving Specialist**
 
-<h2 align="center"> Technology Stack </h2>
+[![Portfolio](https://img.shields.io/badge/Portfolio-PanterSoft-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://PanterSoft.github.io/portfolio/)
+[![Email](https://img.shields.io/badge/Email-mattesnico@gmail.com-00D9FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mattesnico@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nico%20Mattes-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mattes-nico/)
 
-<p align="center">
-<a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a>
-<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-<a href="https://www.scala-lang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg" alt="scala" width="40" height="40"/> </a>
-<a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a>
-<a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>
-<a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a>
-<a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
-<a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>
-<a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a>
-<a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a>
-<a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a>
-<a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a>
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-<a href="https://www.ros.org/" target="_blank" rel="noreferrer"> <img src="https://github.com/devicons/devicon/blob/master/icons/ros/ros-original.svg" alt="ros" width="40" height="40"/> </a>
-  
-</p>
+</div>
 
-<h2 align="center"> Get in touch with me </h2>
+---
 
-<p align="center">
-  <a href="mailto: mattesnico@gmail.com">
-    <img src="https://img.shields.io/badge/-PanterSoft-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mattesnico@gmail.com"/>
-  </a>
-  <a href="https://www.linkedin.com/in/mattes-nico/">
-  <img src="https://img.shields.io/badge/-PanterSoft-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mattes-nico-807b9a251/"/>
-</p>
+## 👋 About Me
 
-<h2 align="center"> My Contribution Graph </h2>
-<p align="center">
-  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PanterSoft/PanterSoft/raw/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/PanterSoft/PanterSoft/raw/output/github-snake.svg">
-  <img alt="github-snake" src="github-snake.svg">
-  </picture>
-</p>
+I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Computer Science** 🎓 at **HTWG Konstanz** 🏛.
 
-<h2 align="center"> My Github Stats </h2>
-<br>
-<p align = "center">
-  <img  src = "https://github-readme-stats.vercel.app/api?username=PanterSoft&show_icons=true&theme=chartreuse-dark&line_height=27">
-</p>
-<p align = "center">
-  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=PanterSoft&hide=&theme=chartreuse-dark">
-</p>
-<p align = "center">
- <img  src="https://github-readme-streak-stats.herokuapp.com/?user=PanterSoft&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark&line_height=0" />
-</p>
-<hr>
-<p align="center"> If you like it, fork 🍴 and star ⭐ </p>
+- 🎓 **Bachelor's Degree in Applied Computer Science** completed at HTWG Konstanz
+- 💡 I'm a passionate learner who's always willing to learn and work across technologies and domains
+- ✨ I love to explore new technologies and leverage them to solve real-life problems
+- 🏎️ I am involved in the Formula student team **"Bodensee Racing Team"** where I work in the **autonomous driving department** as Head of Department
+
+---
+
+## 🛠️ Technology Stack
+
+<div align="center">
+
+### Programming Languages
+
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Scala](https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+### Tools & Frameworks
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![ROS](https://img.shields.io/badge/ROS-22314E?style=for-the-badge&logo=ros&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+</div>
+
+---
+
+## 📊 GitHub Statistics
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=PanterSoft&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00D9FF&text_color=ffffff)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=PanterSoft&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=ffffff)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=PanterSoft&theme=dark&hide_border=true&background=0D1117&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF)
+
+</div>
+
+---
+
+## 🐍 Contribution Graph
+
+<div align="center">
+
+![Snake animation](https://github.com/PanterSoft/PanterSoft/blob/output/github-contribution-grid-snake.svg)
+
+</div>
+
+---
+
+## 📬 Get In Touch
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-mattesnico@gmail.com-00D9FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mattesnico@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nico%20Mattes-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mattes-nico/)
+[![GitHub](https://img.shields.io/badge/GitHub-PanterSoft-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PanterSoft)
+
+</div>
+
+---
+
+<div align="center">
+
+**If you like my work, feel free to fork 🍴 and star ⭐**
+
+![PanterSoft Logo](https://raw.githubusercontent.com/PanterSoft/PanterSoft/main/images/PanterSoft_Logo_Round.png)
+
+© 2024 PanterSoft. All rights reserved.
+
+</div>
