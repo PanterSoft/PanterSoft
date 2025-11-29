@@ -198,30 +198,128 @@ progressBars.forEach(bar => {
     observer.observe(bar);
 });
 
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_wk1anln';
+const EMAILJS_TEMPLATE_ID = 'template_jd9tgo6';
+const EMAILJS_PUBLIC_KEY = 'Xz5BHxkI2F9cwNlxR';
+
+// Initialize EmailJS
+if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
 // Form Handling
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : '';
+
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        // Disable submit button
+        if (submitButton) {
+            submitButton.disabled = true;
+            const sendingText = translations[currentLanguage]?.contact?.form?.sending || 'Sending...';
+            submitButton.textContent = sendingText;
+        }
 
         // Get form data
         const formData = new FormData(contactForm);
-        const data = {
+        const now = new Date();
+        const timeString = now.toLocaleString(currentLanguage === 'de' ? 'de-DE' : 'en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        const templateParams = {
             name: formData.get('name'),
-            email: formData.get('email'),
+            from_email: formData.get('email'),
             subject: formData.get('subject'),
-            message: formData.get('message')
+            message: formData.get('message'),
+            time: timeString,
+            to_email: 'mattesnico@gmail.com' // Your email address
         };
 
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', data);
+        try {
+            // Check if EmailJS is configured
+            if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' ||
+                EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' ||
+                EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+                // Fallback: Show form data in console for development
+                console.log('EmailJS not configured. Form data:', templateParams);
+                console.log('To enable email sending, configure EmailJS in js/main.js');
 
-        // Show success message (you can customize this)
-        const successMessage = translations[currentLanguage]?.contact?.successMessage || 'Thank you for your message! I will get back to you soon.';
-        alert(successMessage);
+                // Show success message anyway for testing
+                const successMessage = translations[currentLanguage]?.contact?.successMessage || 'Thank you for your message! I will get back to you soon.';
+                showFormMessage(successMessage, 'success');
+                contactForm.reset();
 
-        // Reset form
-        contactForm.reset();
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+                return;
+            }
+
+            // Send email using EmailJS
+            if (typeof emailjs !== 'undefined') {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+
+                // Show success message
+                const successMessage = translations[currentLanguage]?.contact?.successMessage || 'Thank you for your message! I will get back to you soon.';
+                showFormMessage(successMessage, 'success');
+
+                // Reset form
+                contactForm.reset();
+            } else {
+                throw new Error('EmailJS library not loaded');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            const errorMessage = translations[currentLanguage]?.contact?.errorMessage || 'There was an error sending your message. Please try again later or contact me directly via email.';
+            showFormMessage(errorMessage, 'error');
+        } finally {
+            // Re-enable submit button
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        }
     });
+}
+
+// Function to show form messages
+function showFormMessage(message, type) {
+    // Remove existing message if any
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+
+    // Create message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message form-message-${type}`;
+    messageDiv.textContent = message;
+
+    // Insert before submit button
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (submitButton) {
+        contactForm.insertBefore(messageDiv, submitButton);
+    } else {
+        contactForm.appendChild(messageDiv);
+    }
+
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+        if (messageDiv.parentNode) {
+            messageDiv.style.opacity = '0';
+            messageDiv.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => messageDiv.remove(), 300);
+        }
+    }, 5000);
 }
 
 // Initialize particles on load
