@@ -13,8 +13,6 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 - ✨ I love to explore new technologies and leverage them to solve real-life problems
 - 🏎️ I am involved in the Formula student team **"Bodensee Racing Team"** where I work in the **autonomous driving department** as Head of Department
 
----
-
 ## 🛠️ Technology Stack
 
 <div align="center">
@@ -41,8 +39,6 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 
 </div>
 
----
-
 ## 📊 GitHub Statistics
 
 <div align="center">
@@ -55,8 +51,6 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 
 </div>
 
----
-
 ## 🐍 Contribution Graph
 
 <div align="center">
@@ -64,8 +58,6 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 ![Snake animation](https://github.com/PanterSoft/PanterSoft/blob/output/github-contribution-grid-snake.svg)
 
 </div>
-
----
 
 ## 📬 Get In Touch
 
@@ -76,11 +68,7 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nico%20Mattes-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mattes-nico/)
 </div>
 
----
-
 <div align="center">
-
-**If you like my work, feel free to fork 🍴 and star ⭐**
 
 ![PanterSoft Logo](https://raw.githubusercontent.com/PanterSoft/PanterSoft/main/images/PanterSoft_Logo_Round.png)
 
