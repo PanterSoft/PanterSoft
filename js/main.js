@@ -199,12 +199,14 @@ progressBars.forEach(bar => {
 });
 
 // EmailJS Configuration
-const EMAILJS_SERVICE_ID = 'service_wk1anln';
-const EMAILJS_TEMPLATE_ID = 'template_jd9tgo6';
-const EMAILJS_PUBLIC_KEY = 'Xz5BHxkI2F9cwNlxR';
+// Loaded from emailjs.config.js (generated from GitHub Secrets during deployment)
+// For local development, create js/emailjs.config.js with your credentials
+const EMAILJS_SERVICE_ID = typeof EMAILJS_CONFIG !== 'undefined' ? EMAILJS_CONFIG.SERVICE_ID : 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = typeof EMAILJS_CONFIG !== 'undefined' ? EMAILJS_CONFIG.TEMPLATE_ID : 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = typeof EMAILJS_CONFIG !== 'undefined' ? EMAILJS_CONFIG.PUBLIC_KEY : 'YOUR_PUBLIC_KEY';
 
 // Initialize EmailJS
-if (typeof emailjs !== 'undefined') {
+if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
     emailjs.init(EMAILJS_PUBLIC_KEY);
 }
 
