@@ -464,15 +464,16 @@ section {
 .social-icon {
     width: 24px;
     height: 24px;
-    opacity: 0.7;
+    opacity: 0.9;
     transition: all var(--transition-base);
-    filter: brightness(0) invert(1);
+    display: block;
+    object-fit: contain;
 }
 
 .social-icon:hover {
     opacity: 1;
     transform: translateY(-2px);
-    filter: brightness(0) invert(1) drop-shadow(0 0 12px var(--neon-cyan));
+    filter: drop-shadow(0 0 8px var(--neon-cyan));
 }
 
 .hero-image {
@@ -940,8 +941,9 @@ section {
 .social-link img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1);
-    opacity: 0.7;
+    opacity: 0.8;
+    display: block;
+    object-fit: contain;
 }
 
 .social-link:hover {
@@ -952,7 +954,7 @@ section {
 
 .social-link:hover img {
     opacity: 1;
-    filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--neon-cyan));
+    filter: drop-shadow(0 0 8px var(--neon-cyan));
 }
 
 .contact-form {
