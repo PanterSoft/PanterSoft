@@ -2,7 +2,7 @@ name: Deploy Website with EmailJS Config
 
 on:
   push:
-    branches: [ main, master, Site_Dev ]
+    branches: [ Site ]
   workflow_dispatch:
 
 jobs:
