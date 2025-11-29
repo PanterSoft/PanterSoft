@@ -1,0 +1,100 @@
+name: Deploy Website with EmailJS Config
+
+on:
+  push:
+    branches: [ Site ]
+  pull_request:
+    types: [closed]
+    branches: [ Site ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # Only deploy if PR is merged (not closed without merging)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Check if EmailJS secrets are set
+      run: |
+        if [ -z "${{ secrets.EMAILJS_SERVICE_ID }}" ] || [ -z "${{ secrets.EMAILJS_TEMPLATE_ID }}" ] || [ -z "${{ secrets.EMAILJS_PUBLIC_KEY }}" ]; then
+          echo "⚠️ Warning: One or more EmailJS secrets are not set!"
+          echo "The config file will be created with placeholder values."
+        else
+          echo "✓ All EmailJS secrets are set"
+        fi
+
+    - name: Create EmailJS config file
+      run: |
+        # Create the config file with secrets injected
+        echo "// EmailJS Configuration" > js/emailjs.config.js
+        echo "// Auto-generated from GitHub Secrets during CI/CD" >> js/emailjs.config.js
+        echo "// DO NOT EDIT MANUALLY - This file is gitignored" >> js/emailjs.config.js
+        echo "" >> js/emailjs.config.js
+        echo "const EMAILJS_CONFIG = {" >> js/emailjs.config.js
+        echo "    SERVICE_ID: '${{ secrets.EMAILJS_SERVICE_ID }}'," >> js/emailjs.config.js
+        echo "    TEMPLATE_ID: '${{ secrets.EMAILJS_TEMPLATE_ID }}'," >> js/emailjs.config.js
+        echo "    PUBLIC_KEY: '${{ secrets.EMAILJS_PUBLIC_KEY }}'" >> js/emailjs.config.js
+        echo "};" >> js/emailjs.config.js
+
+    - name: Verify config file created
+      run: |
+        if [ ! -f "js/emailjs.config.js" ]; then
+          echo "✗ Config file creation failed"
+          exit 1
+        fi
+        echo "✓ Config file created successfully"
+        # Verify structure without showing secrets
+        if grep -q "EMAILJS_CONFIG" js/emailjs.config.js && grep -q "SERVICE_ID" js/emailjs.config.js; then
+          echo "✓ Config structure is correct"
+          # Show file size to verify it's not empty
+          echo "File size: $(wc -c < js/emailjs.config.js) bytes"
+        else
+          echo "✗ Config structure is invalid"
+          exit 1
+        fi
+
+    - name: List files in js directory
+      run: |
+        echo "Files in js/ directory:"
+        ls -la js/ | grep -E "\.(js|config)" || echo "No .js or config files found"
+        echo ""
+        echo "Verifying emailjs.config.js exists and has content:"
+        if [ -f "js/emailjs.config.js" ]; then
+          echo "✓ File exists"
+          echo "First few lines (without secrets):"
+          head -n 3 js/emailjs.config.js
+          echo "..."
+          echo "File contains EMAILJS_CONFIG: $(grep -q 'EMAILJS_CONFIG' js/emailjs.config.js && echo 'YES' || echo 'NO')"
+        else
+          echo "✗ File does not exist!"
+          exit 1
+        fi
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: gh-pages
+        keep_files: false
+        exclude_assets: ''
+        force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Verify deployment
+      run: |
+        echo "✓ Deployment completed"
+        echo "Website should be available at: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+        echo ""
+        echo "Note: It may take 1-2 minutes for changes to appear."
+        echo "If the site doesn't update, try:"
+        echo "  1. Hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R)"
+        echo "  2. Clear browser cache"
+        echo "  3. Wait a few minutes for GitHub Pages to propagate"

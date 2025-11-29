@@ -1,0 +1,9 @@
+# PanterSoft - Robots.txt
+
+# Allow main site
+Allow: /
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
