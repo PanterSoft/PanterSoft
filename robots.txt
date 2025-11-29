@@ -1,10 +1,4 @@
 # PanterSoft - Robots.txt
-# Prevents search engines from indexing private/internal documents
-
-User-agent: *
-Disallow: /corporate-design-guide.html
-Disallow: /.htaccess
-Disallow: /README-DESIGN.md
 
 # Allow main site
 Allow: /

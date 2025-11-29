@@ -1,5 +1,8 @@
 // Modern Portfolio Website - JavaScript
 
+// Language and Translation
+let currentLanguage = localStorage.getItem('language') || 'en';
+
 // DOM Elements
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
@@ -8,6 +11,8 @@ const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contactForm');
 const titleRotate = document.getElementById('titleRotate');
 const progressBars = document.querySelectorAll('.progress-fill');
+const langToggle = document.getElementById('langToggle');
+const currentLangDisplay = document.getElementById('currentLang');
 
 // Navigation Toggle
 navToggle.addEventListener('click', () => {
@@ -55,14 +60,81 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Translation Functions
+function getNestedTranslation(obj, path) {
+    return path.split('.').reduce((o, p) => o && o[p], obj);
+}
+
+function translatePage(lang) {
+    if (!translations[lang]) return;
+
+    const t = translations[lang];
+    currentLanguage = lang;
+    const htmlElement = document.documentElement;
+    htmlElement.setAttribute('lang', lang);
+    localStorage.setItem('language', lang);
+
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getNestedTranslation(t, key);
+        if (translation) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                // Don't translate input/textarea content, only placeholders
+                return;
+            }
+            element.innerHTML = translation;
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const translation = getNestedTranslation(t, key);
+        if (translation) {
+            element.placeholder = translation;
+        }
+    });
+
+    // Update language button
+    if (currentLangDisplay) {
+        currentLangDisplay.textContent = lang.toUpperCase();
+    }
+
+    // Update title rotation titles
+    if (t.hero && t.hero.titles) {
+        updateTitleRotation(t.hero.titles);
+    }
+}
+
+// Language Toggle
+if (langToggle) {
+    langToggle.addEventListener('click', () => {
+        const newLang = currentLanguage === 'en' ? 'de' : 'en';
+        translatePage(newLang);
+    });
+}
+
 // Title Rotation Animation
-const titles = ['Developer', 'Creator', 'Engineer'];
+let titles = translations[currentLanguage]?.hero?.titles || ['Developer', 'Creator', 'Engineer'];
 let currentTitleIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
 let typingSpeed = 100;
 
+function updateTitleRotation(newTitles) {
+    titles = newTitles;
+    currentTitleIndex = 0;
+    currentCharIndex = 0;
+    isDeleting = false;
+    if (titleRotate) {
+        titleRotate.textContent = '';
+    }
+}
+
 function typeTitle() {
+    if (!titleRotate || !titles || titles.length === 0) return;
+
     const currentTitle = titles[currentTitleIndex];
 
     if (isDeleting) {
@@ -144,39 +216,15 @@ if (contactForm) {
         console.log('Form submitted:', data);
 
         // Show success message (you can customize this)
-        alert('Thank you for your message! I will get back to you soon.');
+        const successMessage = translations[currentLanguage]?.contact?.successMessage || 'Thank you for your message! I will get back to you soon.';
+        alert(successMessage);
 
         // Reset form
         contactForm.reset();
     });
 }
 
-// Animation Toggle
-let currentAnimationMode = 'circuit'; // 'circuit' or 'particle'
-const animationToggle = document.getElementById('animationToggle');
-const heroBackground = document.querySelector('.hero-background');
-
-if (animationToggle && heroBackground) {
-    animationToggle.addEventListener('click', () => {
-        if (currentAnimationMode === 'circuit') {
-            currentAnimationMode = 'particle';
-            heroBackground.classList.remove('circuit-mode');
-            heroBackground.classList.add('particle-mode');
-            animationToggle.querySelector('.toggle-icon').textContent = '●';
-            // Initialize particles if not already done
-            initParticles();
-        } else {
-            currentAnimationMode = 'circuit';
-            heroBackground.classList.remove('particle-mode');
-            heroBackground.classList.add('circuit-mode');
-            animationToggle.querySelector('.toggle-icon').textContent = '⚡';
-        }
-    });
-
-    // Set initial mode
-    heroBackground.classList.add('circuit-mode');
-}
-
+// Initialize particles on load
 function initParticles() {
     // Particles.js Configuration - PanterSoft Cyberpunk Circuit Design
     if (typeof particlesJS !== 'undefined' && !window.particlesInitialized) {
@@ -199,7 +247,7 @@ function initParticles() {
                 }
             },
             shape: {
-                type: ['circle', 'triangle'], // Mix of shapes for circuit-like appearance
+                type: ['circle', 'triangle'],
                 stroke: {
                     width: 0,
                     color: '#000000'
@@ -260,7 +308,7 @@ function initParticles() {
             events: {
                 onhover: {
                     enable: true,
-                    mode: 'grab' // Creates circuit-like connections on hover
+                    mode: 'grab'
                 },
                 onclick: {
                     enable: true,
@@ -336,6 +384,12 @@ window.addEventListener('scroll', highlightNavigation);
 
 // Initialize on load
 window.addEventListener('load', () => {
+    // Initialize language
+    translatePage(currentLanguage);
+
+    // Initialize particles
+    initParticles();
+
     // Animate elements on initial load
     document.querySelectorAll('.hero-text, .hero-image').forEach((el, index) => {
         setTimeout(() => {
