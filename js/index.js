@@ -25,7 +25,7 @@ $(function(){
      $('.navigation-close').on('click',function(){
         gsap.to('#navigation-content',.6,{y:"-100%"});
     });
-   }); 
+   });
 
 $(function(){
     var TxtRotate = function(el, toRotate, period) {
@@ -37,24 +37,24 @@ $(function(){
         this.tick();
         this.isDeleting = false;
       };
-      
+
       TxtRotate.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
-      
+
         if (this.isDeleting) {
           this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
           this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-      
+
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-      
+
         var that = this;
         var delta = 200 - Math.random() * 100;
-      
+
         if (this.isDeleting) { delta /= 2; }
-      
+
         if (!this.isDeleting && this.txt === fullTxt) {
           delta = this.period;
           this.isDeleting = true;
@@ -63,12 +63,12 @@ $(function(){
           this.loopNum++;
           delta = 100;
         }
-      
+
         setTimeout(function() {
           that.tick();
         }, delta);
       };
-      
+
       window.onload = function() {
         var elements = document.getElementsByClassName('txt-rotate');
         for (var i=0; i<elements.length; i++) {
@@ -87,7 +87,8 @@ $(function(){
 })
 $(function(){
 
-    $('#about-link').on('click',function(){
+    $('#about-link').on('click',function(e){
+      e.preventDefault();
       gsap.to('#navigation-content',0,{display:"none",delay:.7});
       gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
   gsap.to('#header',0,{display:"none"});
@@ -101,7 +102,8 @@ gsap.to('#contact',0,{display:"none"});
    gsap.to('#about',0,{display:"block",delay:.7});
    gsap.to('#navigation-content',0,{display:'flex',delay:2});
  })
- $('#contact-link').on('click',function(){
+ $('#contact-link').on('click',function(e){
+   e.preventDefault();
    gsap.to('#navigation-content',0,{display:"none",delay:.7});
    gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
 gsap.to('#header',0,{display:"none"});
@@ -115,7 +117,8 @@ gsap.to('#breaker-two',0,{display:"none",delay:2});
 gsap.to('#contact',0,{display:"block",delay:.7});
 gsap.to('#navigation-content',0,{display:'flex',delay:2});
 })
-$('#portfolio-link').on('click',function(){
+$('#portfolio-link').on('click',function(e){
+  e.preventDefault();
   gsap.to('#navigation-content',0,{display:"none",delay:.7});
   gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
 gsap.to('#header',0,{display:"none"});
@@ -143,7 +146,8 @@ gsap.to('#breaker-two',0,{display:"none",delay:2});
 gsap.to('#blog',0,{display:"block",delay:.7});
 gsap.to('#navigation-content',0,{display:'flex',delay:2});
 })
-$('#home-link').on('click',function(){
+$('#home-link').on('click',function(e){
+  e.preventDefault();
   gsap.to('#navigation-content',0,{display:"none",delay:.7});
   gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
 gsap.to('#header',0,{display:"none"});
@@ -159,12 +163,32 @@ gsap.to('#header',0,{display:"block",delay:.7});
 gsap.to('#navigation-content',0,{display:'flex',delay:2});
 })
 
+// Smooth scroll for anchor links
+$('a[href^="#"]').on('click', function(e) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+        e.preventDefault();
+        // Navigation will handle section switching
+    }
+});
+
+// Header CTA buttons
+$('#about-cta-link').on('click', function(e) {
+    e.preventDefault();
+    $('#about-link').trigger('click');
+});
+
+$('#portfolio-cta-link').on('click', function(e) {
+    e.preventDefault();
+    $('#portfolio-link').trigger('click');
+});
+
 })
 $(function(){
  var body =  document.querySelector('body');
  var $cursor = $('.cursor')
    function cursormover(e){
-    
+
     gsap.to( $cursor, {
       x : e.clientX ,
       y : e.clientY,
@@ -176,13 +200,13 @@ $(function(){
      scale:1.4,
      opacity:1
     })
-    
+
   }
   function cursor(e){
     gsap.to( $cursor, {
      scale:1,
      opacity:.6
-    }) 
+    })
   }
   $(window).on('mousemove',cursormover);
   $('.menubar').hover(cursorhover,cursor);
