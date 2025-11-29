@@ -251,13 +251,16 @@ if (contactForm) {
                 EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' ||
                 EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
                 // Fallback: Show form data in console for development
-                console.log('EmailJS not configured. Form data:', templateParams);
-                console.log('To enable email sending, configure EmailJS in js/main.js');
+                console.error('EmailJS not configured properly!');
+                console.error('SERVICE_ID:', EMAILJS_SERVICE_ID);
+                console.error('TEMPLATE_ID:', EMAILJS_TEMPLATE_ID);
+                console.error('PUBLIC_KEY:', EMAILJS_PUBLIC_KEY ? 'SET (hidden)' : 'NOT SET');
+                console.log('Form data:', templateParams);
+                console.log('To enable email sending, configure EmailJS secrets in GitHub repository settings.');
 
-                // Show success message anyway for testing
-                const successMessage = translations[currentLanguage]?.contact?.successMessage || 'Thank you for your message! I will get back to you soon.';
-                showFormMessage(successMessage, 'success');
-                contactForm.reset();
+                // Show error message
+                const errorMessage = translations[currentLanguage]?.contact?.errorMessage || 'There was an error sending your message. Please try again later or contact me directly via email.';
+                showFormMessage(errorMessage, 'error');
 
                 if (submitButton) {
                     submitButton.disabled = false;
