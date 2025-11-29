@@ -151,9 +151,37 @@ if (contactForm) {
     });
 }
 
-// Particles.js Configuration - PanterSoft Cyberpunk Circuit Design
-if (typeof particlesJS !== 'undefined') {
-    particlesJS('particles', {
+// Animation Toggle
+let currentAnimationMode = 'circuit'; // 'circuit' or 'particle'
+const animationToggle = document.getElementById('animationToggle');
+const heroBackground = document.querySelector('.hero-background');
+
+if (animationToggle && heroBackground) {
+    animationToggle.addEventListener('click', () => {
+        if (currentAnimationMode === 'circuit') {
+            currentAnimationMode = 'particle';
+            heroBackground.classList.remove('circuit-mode');
+            heroBackground.classList.add('particle-mode');
+            animationToggle.querySelector('.toggle-icon').textContent = '●';
+            // Initialize particles if not already done
+            initParticles();
+        } else {
+            currentAnimationMode = 'circuit';
+            heroBackground.classList.remove('particle-mode');
+            heroBackground.classList.add('circuit-mode');
+            animationToggle.querySelector('.toggle-icon').textContent = '⚡';
+        }
+    });
+
+    // Set initial mode
+    heroBackground.classList.add('circuit-mode');
+}
+
+function initParticles() {
+    // Particles.js Configuration - PanterSoft Cyberpunk Circuit Design
+    if (typeof particlesJS !== 'undefined' && !window.particlesInitialized) {
+        window.particlesInitialized = true;
+        particlesJS('particles', {
         particles: {
             number: {
                 value: 120,
@@ -270,6 +298,7 @@ if (typeof particlesJS !== 'undefined') {
         },
         retina_detect: true
     });
+    }
 }
 
 // Close mobile menu when clicking outside

@@ -1,0 +1,8 @@
+# PanterSoft - Protect Corporate Design Guide
+# This file prevents public access to the corporate design guide
+
+# Block access to corporate design guide
+<Files "corporate-design-guide.html">
+    Order allow,deny
+    Deny from all
+</Files>

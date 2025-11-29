@@ -44,7 +44,11 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
+            <canvas id="circuitCanvas" class="circuit-canvas"></canvas>
             <div class="particles" id="particles"></div>
+            <button class="animation-toggle" id="animationToggle" aria-label="Toggle animation style" title="Switch between circuit and particle animation">
+                <span class="toggle-icon">⚡</span>
+            </button>
         </div>
         <div class="hero-content">
             <div class="hero-text">
@@ -371,6 +375,7 @@
 
     <!-- Scripts -->
     <script src="js/particles.min.js"></script>
+    <script src="js/circuit-animation.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
