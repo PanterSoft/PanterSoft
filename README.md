@@ -1,7 +1,5 @@
 <div align="center">
 
-# PanterSoft
-
 ![PanterSoft Banner](https://raw.githubusercontent.com/PanterSoft/PanterSoft/main/images/PanterSoft_Banner.png)
 
 ## 👋 About Me
