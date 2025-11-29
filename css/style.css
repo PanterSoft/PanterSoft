@@ -753,6 +753,8 @@ section {
         0 0 10px rgba(0, 229, 255, 0.6),
         0 0 20px rgba(0, 229, 255, 0.4);
     position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .progress-fill::after {
