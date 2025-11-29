@@ -38,6 +38,19 @@ PanterSoft/
 2. Open `index.html` in a web browser
 3. No build process required - it's a static website
 
+## EmailJS Configuration
+
+The contact form uses EmailJS for sending emails. Credentials are managed via GitHub Secrets and are automatically injected during deployment via GitHub Actions.
+
+For local development, create `js/emailjs.config.js` with the following structure:
+```javascript
+const EMAILJS_CONFIG = {
+    SERVICE_ID: 'your_service_id',
+    TEMPLATE_ID: 'your_template_id',
+    PUBLIC_KEY: 'your_public_key'
+};
+```
+
 ## Design Guidelines
 
 See [CORPORATE-DESIGN-GUIDE.md](./PanterSoft-CORPORATE-DESIGN.md) for complete design specifications, color palette, typography, and branding guidelines.

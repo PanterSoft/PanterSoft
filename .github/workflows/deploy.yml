@@ -1,0 +1,56 @@
+name: Generate EmailJS Config
+
+on:
+  push:
+    branches: [ main, master, Site_Dev ]
+  pull_request:
+    branches: [ main, master, Site_Dev ]
+  workflow_dispatch:
+
+jobs:
+  generate-config:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Create EmailJS config file
+      run: |
+        echo "// EmailJS Configuration" > js/emailjs.config.js
+        echo "// Auto-generated from GitHub Secrets during CI/CD" >> js/emailjs.config.js
+        echo "// DO NOT EDIT MANUALLY - This file is gitignored" >> js/emailjs.config.js
+        echo "" >> js/emailjs.config.js
+        echo "const EMAILJS_CONFIG = {" >> js/emailjs.config.js
+        echo "    SERVICE_ID: '${{ secrets.EMAILJS_SERVICE_ID }}'," >> js/emailjs.config.js
+        echo "    TEMPLATE_ID: '${{ secrets.EMAILJS_TEMPLATE_ID }}'," >> js/emailjs.config.js
+        echo "    PUBLIC_KEY: '${{ secrets.EMAILJS_PUBLIC_KEY }}'" >> js/emailjs.config.js
+        echo "};" >> js/emailjs.config.js
+
+    - name: Verify config file created
+      run: |
+        if [ -f "js/emailjs.config.js" ]; then
+          echo "✓ Config file created successfully"
+          # Don't show actual values in logs
+          grep -q "EMAILJS_CONFIG" js/emailjs.config.js && echo "✓ Config structure is correct"
+        else
+          echo "✗ Config file creation failed"
+          exit 1
+        fi
+
+    - name: Upload config as artifact (for deployment)
+      uses: actions/upload-artifact@v4
+      with:
+        name: website-with-config
+        path: .
+        retention-days: 1
+
+    # Optional: Deploy to GitHub Pages
+    # Uncomment the section below if you want to automatically deploy to GitHub Pages
+    # - name: Deploy to GitHub Pages
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: ./
+    #     keep_files: false

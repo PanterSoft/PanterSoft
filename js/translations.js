@@ -51,7 +51,7 @@ const translations = {
             },
             programming: {
                 title: "Programming",
-                description: "Proficient in Python, C++, Java, and more. Building scalable software solutions and innovative applications."
+                description: "Proficient in Python, C, C++, Bash, C#, and more. Building scalable software solutions and innovative applications."
             },
             progressTitle: "Technical Skills"
         },
@@ -93,9 +93,11 @@ const translations = {
                 emailPlaceholder: "Your Email",
                 subjectPlaceholder: "Subject",
                 messagePlaceholder: "Your Message",
-                submit: "Send Message"
+                submit: "Send Message",
+                sending: "Sending..."
             },
-            successMessage: "Thank you for your message! I will get back to you soon."
+            successMessage: "Thank you for your message! I will get back to you soon.",
+            errorMessage: "There was an error sending your message. Please try again later or contact me directly via email."
         },
         // Footer
         footer: {
@@ -152,7 +154,7 @@ const translations = {
             },
             programming: {
                 title: "Programmierung",
-                description: "Erfahren in Python, C++, Java und mehr. Entwicklung skalierbarer Softwarelösungen und innovativer Anwendungen."
+                description: "Erfahren in Python, C, C++, Bash, C# und mehr. Entwicklung skalierbarer Softwarelösungen und innovativer Anwendungen."
             },
             progressTitle: "Technische Fähigkeiten"
         },
@@ -194,9 +196,11 @@ const translations = {
                 emailPlaceholder: "Ihre E-Mail",
                 subjectPlaceholder: "Betreff",
                 messagePlaceholder: "Ihre Nachricht",
-                submit: "Nachricht senden"
+                submit: "Nachricht senden",
+                sending: "Wird gesendet..."
             },
-            successMessage: "Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden."
+            successMessage: "Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden.",
+            errorMessage: "Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail."
         },
         // Footer
         footer: {
