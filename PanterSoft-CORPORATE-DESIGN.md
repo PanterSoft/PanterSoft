@@ -108,7 +108,7 @@ The heart of the brand. The panther head made of circuits.
 
 #### Variant C: Monochrome
 - **Usage:** For print, footer, or when color is not possible
-- **Asset:** `Pantersoft-logo-bw.png`
+- **Note:** Monochrome version can be created by converting the standard logo to grayscale when needed
 
 ### 4.3. Favicon
 
@@ -147,7 +147,6 @@ These icons should be more restrained, often monochrome or glowing Cyan in activ
 - Name: `icon-name.png`
 - Location: `icon-location.png`
 - Email: `icon-email.png`
-- Phone: `icon-phone.png`
 
 ---
 
@@ -260,7 +259,6 @@ All colors and effects are defined as CSS variables for easy maintenance.
 - `PanterSoft_Banner.png` - Hero Banner (transparent)
 - `PanterSoft_Logo.png` - Standard Logo (transparent)
 - `PanterSoft_Logo_Round.png` - Round Icon (transparent)
-- `Pantersoft-logo-bw.png` - Monochrome Version
 
 ### Icons
 
