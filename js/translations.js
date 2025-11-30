@@ -61,8 +61,8 @@ const translations = {
             title: "Featured",
             titleHighlight: "Projects",
             project1: {
-                title: "Autonomous Driving System",
-                description: "Advanced autonomous driving solutions for racing applications"
+                title: "TheSourceInstaller",
+                description: "Distribution-independent source-based package manager built in pure C"
             },
             project2: {
                 title: "Robotic Control Systems",
@@ -164,8 +164,8 @@ const translations = {
             title: "Ausgewählte",
             titleHighlight: "Projekte",
             project1: {
-                title: "Autonomes Fahrsystem",
-                description: "Fortschrittliche Lösungen für autonomes Fahren in Rennanwendungen"
+                title: "TheSourceInstaller",
+                description: "Verteilungsunabhängiger quellbasierter Paketmanager in reinem C"
             },
             project2: {
                 title: "Robotische Steuerungssysteme",
