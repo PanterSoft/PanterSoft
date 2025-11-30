@@ -61,7 +61,7 @@ I'm a **1st year Master's student** pursuing a **Master's Degree in Applied Comp
 
 <div align="center">
 
-[![Contact Form](https://img.shields.io/badge/Contact%20Form-Send%20Message-00D9FF?style=for-the-badge&logo=mail&logoColor=white)](https://PanterSoft.github.io/portfolio/#contact)
+[![Contact Form](https://img.shields.io/badge/Contact%20Form-Send%20Message-00D9FF?style=for-the-badge&logo=mail&logoColor=white)](https://pantersoft.github.io/PanterSoft/#contact)
 [![Email](https://img.shields.io/badge/Email-mattesnico@gmail.com-00D9FF?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mattesnico@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nico%20Mattes-00D9FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mattes-nico/)
 </div>
